@@ -1,0 +1,15 @@
+import math
+def quadraticsolver(a,b,c): ## This line of code defines the function used to solve the quadratic equation
+    try:                         ## the block code solves the quadratic equation and returns result for real solution
+        quad=b**2-4*a*c
+        result1=-b+math.sqrt(quad)/2*a
+        result2=-b-math.sqrt(quad)/2*a
+        return(result1,result2)
+    except ValueError:                   ## the block code solves quadratic and returns complex result 
+        print("The solution is complex")
+        z1=complex(-b,math.sqrt(abs(quad)))
+        result11=z1/2*a
+        z2=complex(-b,-math.sqrt(abs(quad)))
+        result22=z2/2*a
+        return(result11,result22)
+      
